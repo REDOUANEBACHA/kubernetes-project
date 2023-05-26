@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-redouane
+  labels:
+    app: redis-redouane
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-redouane
+  template:
+    metadata:
+      labels:
+        app: redis-redouane
+    spec:
+      containers:
+        - name: redis-redouane
+          image: redis
+          ports:
+            - containerPort: 6379
+
+
+
+          

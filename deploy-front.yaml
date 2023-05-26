@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-site-redouane
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front-site-redouane
+  template:
+    metadata:
+      labels:
+        app: front-site-redouane
+    spec:
+      imagePullSecrets:
+        - name: pain
+      containers:
+        - name: front-site
+          image: cloud.canister.io:5000/redouane/front-site:1
+          
