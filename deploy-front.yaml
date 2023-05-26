@@ -12,9 +12,9 @@ spec:
       labels:
         app: front-site-redouane
     spec:
-      imagePullSecrets:
-        - name: pain
+     imagePullSecrets:
+        - name: mysecret
       containers:
-        - name: front-site
-          image: cloud.canister.io:5000/redouane/front-site:1
+        - name: front
+          image: cloud.canister.io:5000/luke34/front:front
           
